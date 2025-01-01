@@ -41,7 +41,7 @@ def main():
             print(f'銘柄:{brand}のデータの取得を開始します。')
             try:
                 data = yf.download(brand+'.T')
-            except BaseException as e:
+            except BaseException as e: # pylint: disable=broad-except
                 print(f'エラー:{e}')
                 break
 
